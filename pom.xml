@@ -4,27 +4,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>io.github.technic47</groupId>
+        <artifactId>shop-spring-boot-starter</artifactId>
+        <version>1.0.32</version>
     </parent>
 
     <groupId>ru.kuznetsov.shop</groupId>
     <artifactId>config</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Config-server</name>
     <description>Config-server</description>
 
     <properties>
-        <java.version>17</java.version>
-        <spring-cloud.version>2025.1.0</spring-cloud.version>
+        <skipTests>true</skipTests>
+        <spring-cloud.version>2025.0.1</spring-cloud.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webmvc</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -33,7 +32,7 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webmvc-test</artifactId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -52,11 +51,8 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
         </plugins>
+        <finalName>Config_server</finalName>
     </build>
 
 </project>
